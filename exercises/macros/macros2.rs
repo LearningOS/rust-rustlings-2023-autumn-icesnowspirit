@@ -4,9 +4,7 @@
 // hint.
 
 
-fn main() {
-    my_macro!();
-}
+
 
 macro_rules! my_macro {
     () => {
