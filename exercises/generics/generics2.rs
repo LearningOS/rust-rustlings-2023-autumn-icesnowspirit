@@ -8,9 +8,10 @@
 
 // I AM NOT DONE
 
-struct Wrapper {
-    value: u32,
+struct Wrapper<T> {
+    value: T,
 }
+
 
 impl Wrapper {
     pub fn new(value: u32) -> Self {
