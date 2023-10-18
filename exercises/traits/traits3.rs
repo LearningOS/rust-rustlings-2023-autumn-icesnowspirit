@@ -10,21 +10,28 @@
 
 
 pub trait Licensed {
-    fn licensing_info(&self) -> String {
-        String::from("Some information")
+    fn licensing_info(&self) -> String;
     }
-}
-
-struct SomeSoftware {
+    
+    struct SomeSoftware {
     version_number: i32,
-}
-
-struct OtherSoftware {
+    }
+    
+    struct OtherSoftware {
     version_number: String,
-}
-
-impl Licensed for SomeSoftware {} // Don't edit this line
-impl Licensed for OtherSoftware {} // Don't edit this line
+    }
+    
+    impl Licensed for SomeSoftware {
+    fn licensing_info(&self) -> String {
+    String::from("Some information")
+    }
+    }
+    
+    impl Licensed for OtherSoftware {
+        fn licensing_info(&self) -> String {
+            String::from("Some information")
+        }
+    }
 
 #[cfg(test)]
 mod tests {
