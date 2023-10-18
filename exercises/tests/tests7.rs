@@ -41,7 +41,6 @@ fn main() {}
 #[cfg(test)]
 mod tests {
     use super::*;
-
     #[test]
     fn test_success() {
         let timestamp = std::time::SystemTime::now()
